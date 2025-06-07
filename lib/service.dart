@@ -1,5 +1,4 @@
 import 'package:get_storage/get_storage.dart';
-import 'package:localstorage/localstorage.dart';
 import 'package:get/get.dart';
 import 'package:mytask/noti_service.dart';
 import 'package:mytask/task-model.dart';
@@ -32,7 +31,6 @@ class TaskService extends GetxController{
     final task = Task(title: title, priority: priority);
     task.notificationId = DateTime.now().millisecondsSinceEpoch % 100000; // Generate ID
 
-    // Schedule notification for 1 minute later
     notificationService.scheduleTaskReminder(
       id: task.notificationId!,
       title: task.title,

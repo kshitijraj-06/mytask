@@ -134,9 +134,9 @@ class HomePage extends StatelessWidget {
 
   Widget _buildPriorityIndicator(int priority) {
     final colors = [
-      Colors.red,    // High
-      Colors.orange, // Medium
-      Colors.green,  // Low
+      Colors.red,
+      Colors.orange,
+      Colors.green,
     ];
     return Container(
       width: 12,
