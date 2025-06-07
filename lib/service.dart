@@ -28,8 +28,8 @@ class TaskService extends GetxController{
     box.write(_storagekey, tasks.map((task)=> task.toMap()).toList());
   }
 
-  void addTask(String title){
-    final task = Task(title: title);
+  void addTask(String title, int priority){
+    final task = Task(title: title, priority: priority);
     task.notificationId = DateTime.now().millisecondsSinceEpoch % 100000; // Generate ID
 
     // Schedule notification for 1 minute later
@@ -61,5 +61,10 @@ class TaskService extends GetxController{
     saveTasks();
   }
 
+  void updateTask(int index, String newTitle, int newPriority) {
+    tasks[index].title = newTitle;
+    tasks[index].priority = newPriority;
+    tasks.refresh();
+  }
 
 }
