@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TaskMaster Pro'),
+        title: const Text('My Tasks'),
         actions: [
           Obx(() => AnimatedSwitcher(
             duration: const Duration(milliseconds: 300),

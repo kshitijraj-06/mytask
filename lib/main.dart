@@ -18,6 +18,7 @@ class MytaskApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      title: 'My Tasks',
       home: HomePage()
     );
   }
